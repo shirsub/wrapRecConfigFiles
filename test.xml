@@ -12,7 +12,7 @@
   </models>
   <data>
     <dataReaders>
-      <reader id="ml1m-ml" path="ml-1m\ratings.dat" sliceType="other" dataType="ratings" class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
+      <reader id="ml1m-ml" path="ml-1m/ratings.dat" sliceType="other" dataType="ratings" class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
     </dataReaders>
     <dataContainers>
       <dataContainer id="ml100k" dataReaders="ml1m-ml" />
