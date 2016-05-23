@@ -1,17 +1,24 @@
 <wraprec>
   <models>
     <model id="mf" class="WrapRec.Models.MmlRecommender">
-      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.MatrixFactorization" NumFactors="50" NumIter="100" />
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.MatrixFactorization" NumFactors="10,50" NumIter="30,100" />
     </model>
+    <model id="rd" class="WrapRec.Models.MmlRecommender">
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.Random" NumFactors="10,50" NumIter="30,100" />
+    </model>
+    <model id="ua" class="WrapRec.Models.MmlRecommender">
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.UserAverage" NumFactors="10,50" NumIter="30,100" />
+    </model>
+	<model id="libfm" class="WrapRec.Models.LibFmWrapper">
+	  <parameters libFmPath="libfm.net.exe" task="r" dim="1-1-10" method="sgd" iter="30" learn_rate="0.02" />
+	</model>	
   </models>
   <data>
     <dataReaders>
-      <reader id="ml1m-ml" path="ml-1m\ratings.dat" sliceType="other"
-	  dataType="ratings"class="WrapRec.IO.CsvReader" hasHeader="false"
-	  header="userId,itemId,rating,timestamp:n" delimiter="::" />
+      <reader id="ml1m-ml" path="ml-1m\ratings.dat" sliceType="other" dataType="ratings"class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
     </dataReaders>
     <dataContainers>
-      <dataContainer id="ml100k" dataReaders="ml100k-all" />
+      <dataContainer id="ml100k" dataReaders="ml1m-ml" />
     </dataContainers>
   </data>
   <splits>
@@ -25,6 +32,6 @@
     </evalContext>
   </evalContexts>
   <experiments run="ml100k" resultsFolder="results" separator="\t" verbosity="info">
-    <experiment id="ml100k" models="mf,bmf" splits="ml100k-cv" evalContext="eval" />
+    <experiment id="ml100k" models="mf,rd,ua," splits="ml100k-cv" evalContext="eval" />
   </experiments>
 </wraprec>
