@@ -12,7 +12,7 @@
   </models>
   <data>
     <dataReaders>
-      <reader id="ml1m-ml" path="ml-1m/ratings.dat" sliceType="other" dataType="ratings" class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
+      <reader id="ml1m-ml" path="/home/student/data/cs4065/wraprec_sample_data3/ml-1m/ratings.dat" sliceType="other" dataType="ratings" class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
     </dataReaders>
     <dataContainers>
       <dataContainer id="ml1m" dataReaders="ml1m-ml" />
@@ -28,7 +28,7 @@
       <evaluator class="WrapRec.Evaluation.RankingEvaluators" candidateItemsMode="training" numCandidates="1000" cutOffs="5,10,20" />
     </evalContext>
   </evalContexts>
-  <experiments run="ml1m" resultsFolder="ml-1m" separator="\t" verbosity="info">
+  <experiments run="ml1m" resultsFolder="/home/student/data/cs4065/wraprec_sample_data3/ml-1m" separator="\t" verbosity="info">
     <experiment id="ml1m" models="mf,rd,ua" splits="ml1m-cv" evalContext="eval" />
   </experiments>
 </wraprec>
