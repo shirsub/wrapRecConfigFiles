@@ -1,0 +1,132 @@
+Error in expriment 'ml1m', model 'rd', split 'ml1m-cv-fold1':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'ua', split 'ml1m-cv-fold1':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'libfm', split 'ml1m-cv-fold1':
+Could not find file "/home/student/wraprec/train.model".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) <0x7fab2455d2c0 + 0x005cd> in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, System.String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost) <0x7fab2455d210 + 0x0004d> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions,string,bool,bool,bool)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost) <0x7fab243cc530 + 0x000e4> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) <0x7fab243cc4f0 + 0x00030> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, Boolean detectEncodingFromByteOrderMarks) <0x7fab243cc420 + 0x0003b> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) <0x7fab243cc400 + 0x00016> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at System.IO.File.OpenText (System.String path) <0x7fab2455aa90 + 0x00024> in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) <0x7fab2455b490 + 0x00020> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.LoadFmModel () <0x411b40e0 + 0x000ad> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.Train (WrapRec.Data.Split split) <0x411ad390 + 0x0085f> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.<Run>b__0 () <0x411905b0 + 0x0001e> in <filename unknown>:0 
+  at MyMediaLite.Wrap.MeasureTime (System.Action t) <0x4117a7f0 + 0x00023> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Run () <0x411903c0 + 0x000c3> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x0018c> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'rd', split 'ml1m-cv-fold2':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'ua', split 'ml1m-cv-fold2':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'libfm', split 'ml1m-cv-fold2':
+Could not find file "/home/student/wraprec/train.model".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) <0x7fab2455d2c0 + 0x005cd> in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, System.String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost) <0x7fab2455d210 + 0x0004d> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions,string,bool,bool,bool)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost) <0x7fab243cc530 + 0x000e4> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) <0x7fab243cc4f0 + 0x00030> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, Boolean detectEncodingFromByteOrderMarks) <0x7fab243cc420 + 0x0003b> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) <0x7fab243cc400 + 0x00016> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at System.IO.File.OpenText (System.String path) <0x7fab2455aa90 + 0x00024> in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) <0x7fab2455b490 + 0x00020> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.LoadFmModel () <0x411b40e0 + 0x000ad> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.Train (WrapRec.Data.Split split) <0x411ad390 + 0x0085f> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.<Run>b__0 () <0x411905b0 + 0x0001e> in <filename unknown>:0 
+  at MyMediaLite.Wrap.MeasureTime (System.Action t) <0x4117a7f0 + 0x00023> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Run () <0x411903c0 + 0x000c3> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x0018c> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'rd', split 'ml1m-cv-fold3':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'ua', split 'ml1m-cv-fold3':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'libfm', split 'ml1m-cv-fold3':
+Could not find file "/home/student/wraprec/train.model".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) <0x7fab2455d2c0 + 0x005cd> in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, System.String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost) <0x7fab2455d210 + 0x0004d> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions,string,bool,bool,bool)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost) <0x7fab243cc530 + 0x000e4> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) <0x7fab243cc4f0 + 0x00030> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, Boolean detectEncodingFromByteOrderMarks) <0x7fab243cc420 + 0x0003b> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) <0x7fab243cc400 + 0x00016> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at System.IO.File.OpenText (System.String path) <0x7fab2455aa90 + 0x00024> in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) <0x7fab2455b490 + 0x00020> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.LoadFmModel () <0x411b40e0 + 0x000ad> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.Train (WrapRec.Data.Split split) <0x411ad390 + 0x0085f> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.<Run>b__0 () <0x411905b0 + 0x0001e> in <filename unknown>:0 
+  at MyMediaLite.Wrap.MeasureTime (System.Action t) <0x4117a7f0 + 0x00023> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Run () <0x411903c0 + 0x000c3> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x0018c> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'rd', split 'ml1m-cv-fold4':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'ua', split 'ml1m-cv-fold4':
+Cannot resolve MmlRecommender: Object reference not set to an instance of an object
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x003f5> in <filename unknown>:0 
+  at WrapRec.Models.MmlRecommender.Setup () <0x41184530 + 0x00583> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Setup () <0x4117b860 + 0x0010b> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x000a7> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
+Error in expriment 'ml1m', model 'libfm', split 'ml1m-cv-fold4':
+Could not find file "/home/student/wraprec/train.model".
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, Boolean anonymous, FileOptions options) <0x7fab2455d2c0 + 0x005cd> in <filename unknown>:0 
+  at System.IO.FileStream..ctor (System.String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, System.String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost) <0x7fab2455d210 + 0x0004d> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.FileStream:.ctor (string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions,string,bool,bool,bool)
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost) <0x7fab243cc530 + 0x000e4> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, System.Text.Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize) <0x7fab243cc4f0 + 0x00030> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path, Boolean detectEncodingFromByteOrderMarks) <0x7fab243cc420 + 0x0003b> in <filename unknown>:0 
+  at System.IO.StreamReader..ctor (System.String path) <0x7fab243cc400 + 0x00016> in <filename unknown>:0 
+  at (wrapper remoting-invoke-with-check) System.IO.StreamReader:.ctor (string)
+  at System.IO.File.OpenText (System.String path) <0x7fab2455aa90 + 0x00024> in <filename unknown>:0 
+  at System.IO.File.ReadAllLines (System.String path) <0x7fab2455b490 + 0x00020> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.LoadFmModel () <0x411b40e0 + 0x000ad> in <filename unknown>:0 
+  at WrapRec.Models.LibFmWrapper.Train (WrapRec.Data.Split split) <0x411ad390 + 0x0085f> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.<Run>b__0 () <0x411905b0 + 0x0001e> in <filename unknown>:0 
+  at MyMediaLite.Wrap.MeasureTime (System.Action t) <0x4117a7f0 + 0x00023> in <filename unknown>:0 
+  at WrapRec.Core.Experiment.Run () <0x411903c0 + 0x000c3> in <filename unknown>:0 
+  at WrapRec.Core.ExperimentManager.RunSingleExperiment (WrapRec.Core.Experiment e) <0x4117b260 + 0x0018c> in <filename unknown>:0 
+----------------------------------------------------------------------------------------
