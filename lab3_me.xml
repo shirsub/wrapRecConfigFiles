@@ -32,6 +32,6 @@
     </evalContext>
   </evalContexts>
   <experiments run="ml1m" resultsFolder="/home/student/data/cs4065/wraprec_sample_data3/lab3_results" separator="\t" verbosity="info">
-    <experiment id="ml1m" models="mf,rd,ua,libfm" splits="ml1m-st" evalContext="eval" />
+    <experiment id="ml1m" models="mf,rd,ua" splits="ml1m-st" evalContext="eval" />
   </experiments>
 </wraprec>
