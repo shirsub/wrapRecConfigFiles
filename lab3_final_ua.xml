@@ -1,0 +1,36 @@
+<wraprec>
+  <models>
+    <model id="mf" class="WrapRec.Models.MmlRecommender">
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.MatrixFactorization" NumFactors="50" NumIter="100" />
+    </model>
+    <model id="rd" class="WrapRec.Models.MmlRecommender">
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.Random" NumFactors="50" NumIter="100" />
+    </model>
+    <model id="ua" class="WrapRec.Models.MmlRecommender">
+      <parameters ml-class="MyMediaLite.dll:MyMediaLite.RatingPrediction.UserAverage" NumFactors="50" NumIter="100" />
+    </model>
+	<model id="libfm" class="WrapRec.Models.LibFmWrapper">
+	  <parameters libFmPath="libfm.net.exe" task="r" dim="1-1-10" method="sgd" iter="30" learn_rate="0.02" />
+	</model>	
+  </models>
+  <data>
+    <dataReaders>
+      <reader id="ml1m-ml" path="/home/student/data/cs4065/wraprec_sample_data3/ml-1m/ratings.dat" sliceType="other" dataType="ratings" class="WrapRec.IO.CsvReader" hasHeader="false" header="userId,itemId,rating,timestamp:n" delimiter="::" />
+    </dataReaders>
+    <dataContainers>
+      <dataContainer id="ml1m" dataReaders="ml1m-ml" />
+    </dataContainers>
+  </data>
+  <splits>
+    <split id="ml1m-cv" type="crossValidation" dataContainer="ml1m" numFolds="2" />
+  </splits>
+  <evalContexts>
+    <evalContext id="eval">
+      <evaluator class="WrapRec.Evaluation.RMSE" />
+      <evaluator class="WrapRec.Evaluation.MAE" />
+    </evalContext>
+  </evalContexts>
+  <experiments run="ml1m" resultsFolder="/home/student/data/cs4065/wraprec_sample_data3/lab3_results_ua" separator="\t" verbosity="info">
+    <experiment id="ml1m" models="ua" splits="ml1m-cv" evalContext="eval" />
+  </experiments>
+</wraprec>
